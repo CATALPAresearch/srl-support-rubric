@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <script data-require="d3@*" data-semver="3.5.3" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <script type="importmap">
+    {
+      "imports": {
+        "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+      }
+    }
+  </script>
+
+  <div id="app"></div>
+
+  <script type="module">
+    
+    import { createApp } from 'vue'
+    import MyComponent from './components/home.js'
+    draw('dataRfIntentIndex.csv');
+    createApp(MyComponent).mount('#app')
+  </script>
+</body>
+
+</html>

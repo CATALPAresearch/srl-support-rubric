@@ -2,9 +2,15 @@
 <html>
 
 <head>
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
   <link rel="stylesheet" href="style.css" />
   <script data-require="d3@*" data-semver="3.5.3" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.js"></script>
-  <script src="script.js"></script>
+  <script src="src/script.js"></script>
+
 </head>
 
 <body>
@@ -19,10 +25,10 @@
   <div id="app"></div>
 
   <script type="module">
-    
+
     import { createApp } from 'vue'
-    import MyComponent from './components/home.js'
-    draw('dataRfIntentIndex.csv');
+    import MyComponent from './src/home.js'
+    draw('./data/dataRfIntentIndex.csv');
     createApp(MyComponent).mount('#app')
   </script>
 </body>

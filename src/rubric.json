@@ -1,6 +1,6 @@
 [
     {
-      "phase": "Forethought",
+      "phases": "Forethought",
       "categories": [
         {
           "name": "F1. Goal Setting",
@@ -45,7 +45,7 @@
       ]
     },
     {
-      "phase": "Performance",
+      "phases": "Performance",
       "categories": [
         {
           "name": "P1. Self-Instruction",
@@ -98,7 +98,7 @@
       ]
     },
     {
-      "phase": "Self-reflection",
+      "phases": "Self-reflection",
       "categories": [
         {
           "name": "S1. Self-Evaluation",

@@ -2,13 +2,13 @@
   <div class="container">
     <div class="header clearfix">
       <nav>
-        <ul class="nav nav-pills pull-right">
+        <ul hidden class="nav nav-pills pull-right">
           <li role="presentation" class="active"><a href="#">Home</a></li>
           <li role="presentation"><a href="#">About</a></li>
           <li role="presentation"><a href="#">Contact</a></li>
         </ul>
       </nav>
-      <h3 class="text-muted">APLE, CATALPA</h3>
+      <h3 hidden class="text-muted">APLE II, CATALPA</h3>
     </div>
 
     <div class="jumbotron">
@@ -43,29 +43,90 @@
       </p>
     </div>
 
-    
+    <div class="container">
+      <div v-for="(phases,p) in rubric" keay="phase" class="row" :style="'margin-top:50px; background-color:'+phase_colors[p] ">
+        <h3 style="padding:16px;">{{ phases.phases }}</h3>
+        <div
+          v-for="(cat, cat_index) in phases.categories"
+          key="phase"
+          class="col-md-4 carousel slide"
+          data-interval="false"
+          data-ride="carousel"
+          :id="'srl-carousel-' + cat_index + '-' + p"
+          style="padding-top:6px; border: solid 1px #cccccc50; margin:0px;"
+        >
+          <strong style="margin-left: 50px;">{{ cat.name }}</strong>
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li
+              :data-target="'#srl-carousel-' + cat_index + '-' + p"
+              data-slide-to="0"
+            ></li>
+            <li
+              :data-target="'#srl-carousel-' + cat_index + '-' + p"
+              data-slide-to="1"
+              class="active"
+            ></li>
+            <li
+              :data-target="'#srl-carousel-' + cat_index + '-' + p"
+              data-slide-to="2"
+            ></li>
+            <li
+              :data-target="'#srl-carousel-' + cat_index + '-' + p"
+              data-slide-to="3"
+            ></li>
+          </ol>
 
-    <div hidden class="container">
-      <div v-for="phase in rubric" keay="phase" class="row">
-        {{ phase.phase }}
-        <div v-for="cat in phase.categories" key="cat" class="col-md-4 carousel slide" data-ride="carousel">
-          {{ cat.name }}
-          <div class="carousel-inner"></div>
-          <div v-for="level in cat.levels" key="level"  class="carousel-item">
-              {{ level }}
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div
+              class="item"
+              style="height: 200px; margin: 0 50px;"
+            >
+              Level 0. Not supported.
+            </div>
+            <div
+              v-for="(level, index) in cat.levels"
+              key="level"
+              :class="'item' + (index == 0 ? ' active' : '')"
+              style="height: 200px; margin: 0 50px;"
+            >
+              Level {{ index + 1 }}. {{ level }}
+            </div>
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+          <!-- Left and right controls -->
+          <a
+            class="left carousel-control"
+            :href="'#srl-carousel-' + cat_index + '-' + p"
+            data-slide="prev"
+            title="Lower SRL support level"
+          >
+            <span class="glyphicon glyphicon-chevron-left"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <a
+            class="right carousel-control"
+            :href="'#srl-carousel-' + cat_index + '-' + p"
+            data-slide="next"
+            title="Higher SRL support level"
+          >
+            <span class="glyphicon glyphicon-chevron-right"></span>
             <span class="sr-only">Next</span>
           </a>
         </div>
       </div>
     </div>
   </div>
+  <footer class="bg-body-tertiary text-center text-lg-start" style="padding-top:100px;">
+    
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2023 Copyright:
+
+    </div>
+    
+  </footer>
+
 </template>
 
 <script>
@@ -74,9 +135,10 @@ module.exports = {
   data: function () {
     return {
       who: "world",
+      phase_colors: ['#fde74c20', '#5bc0eb20', '#9bc53d20'],
       rubric: [
         {
-          phase: "Forethought",
+          phases: "Forethought",
           categories: [
             {
               name: "F1. Goal Setting",
@@ -121,7 +183,7 @@ module.exports = {
           ],
         },
         {
-          phase: "Performance",
+          phases: "Performance",
           categories: [
             {
               name: "P1. Self-Instruction",
@@ -174,7 +236,7 @@ module.exports = {
           ],
         },
         {
-          phase: "Self-reflection",
+          phases: "Self-reflection",
           categories: [
             {
               name: "S1. Self-Evaluation",
@@ -255,7 +317,6 @@ body {
 /* Customize container */
 @media (min-width: 768px) {
   .container {
-    
   }
 }
 .container-narrow > hr {
@@ -286,6 +347,11 @@ body {
 }
 .marketing p + h4 {
   margin-top: 28px;
+}
+
+.carousel-control.right, .carousel-control.left{
+  background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(0,0,0,.1) 100%);
+  background: none;
 }
 
 /* Responsive: Portrait tablets and up */

@@ -117,7 +117,7 @@ See our [getting started manual](readme_getting_started.md).
 
 > Radovice, S., & Seidel, N. (2024). A Rubric for Support of Self-Regulated Learning. https://doi.org/10.17605/OSF.IO/WF5S3
 
-````
+```
 @misc{Radovic2024-SoftwareSRLRubric,
 author = {Radovice, Slavisa and Seidel, Niels},
 doi = {10.17605/OSF.IO/WF5S3},

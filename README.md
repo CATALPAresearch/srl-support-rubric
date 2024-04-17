@@ -146,8 +146,8 @@ year = {2024}
 * Niels Seidel [@nise81](https://twitter.com/nise81)
 
 ---
-<a href="https://www.fernuni-hagen.de/english/research/clusters/catalpa/"><img src="pix/promotion/catalpa.jpg" width="300" /></a>
-<a href="https://www.fernuni-hagen.de/"><img src="pix/promotion/fernuni.jpg" width="250" /></a>
+<a href="https://www.fernuni-hagen.de/english/research/clusters/catalpa/"><img src="img/promotion/catalpa.jpg" width="300" /></a>
+<a href="https://www.fernuni-hagen.de/"><img src="img/promotion/fernuni.jpg" width="250" /></a>
 
 
 

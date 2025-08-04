@@ -12,6 +12,8 @@
 
 The integration of advanced learning analytics and data-mining technology into higher education has brought various opportunities and challenges, particularly in enhancing students' self-regulated learning (SRL) skills. Analyzing developed features for SRL support, it has become evident that this is not a binary concept but rather a continuum, ranging from limited to advanced levels of SRL support. This article introduces the rubric, designed to assess the degree of self-regulated learning support available within technology enhanced learning environments. It is grounded in the theoretical Zimmerman's model and employs features distilled from empirical studies that have demonstrated significant effectiveness in supporting student self-regulation. Across three phases of SRL the rubrics describe assessment criteria and in detail define performance levels (Limited, Moderate and Advance). By employing the rubric, educators and researchers can 1) gain insights into the extent of implemented SRL approaches, 2) further develop SRL support of learning environments, and 3) better support students on their journey towards becoming self-regulated learners. We report the rubric, along with a description of its development process, a report of the validation analysis, and conclude with a discussion on the rubric's significance in advancing self-regulated learning within the current pedagogical and technological landscape. 
 
+See the [demo](https://catalparesearch.github.io/srl-support-rubric/).
+
 <!-- development-related badges -->
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/CATALPAresearch/srl-support-rubric/commit-activity)
 [![github latest commit](https://badgen.net/github/last-commit/CATALPAresearch/srl-support-rubric)](https://github.com/CATALPAresearch/srl-support-rubric/commit/)
@@ -90,20 +92,14 @@ The main features *SRL Support Rubric* adds on top of *Page* are:
 
 ## How To Use
 
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. 
 
-```bash
-# Open the website and brows the rubrics
-https://catalparesearch.github.io/srl-support-rubric/
+After editing the source the result can be emideatly seen in the index.html file. 
 
-# or clone this repository and browse the raw rubric data using the file
-src/rubric.json
-```
 
 ## Download
 
 You can [download](https://github.com/catalparesearch/srl-support-rubric/releases/tag/latest) the latest installable version of *SRL Support Rubric* for Moodle 3.11.
-
 
 
 ## Emailware

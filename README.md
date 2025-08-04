@@ -104,8 +104,6 @@ src/rubric.json
 
 You can [download](https://github.com/catalparesearch/srl-support-rubric/releases/tag/latest) the latest installable version of *SRL Support Rubric* for Moodle 3.11.
 
-## Getting into Development
-See our [getting started manual](readme_getting_started.md).
 
 
 ## Emailware

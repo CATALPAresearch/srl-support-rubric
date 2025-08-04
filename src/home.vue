@@ -121,7 +121,7 @@
   <footer class="bg-body-tertiary text-center text-lg-start" style="padding-top:100px;">
     
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-      © 2025 Copyright: Slavisa Radovic & Niels Seidel at <a href="https://www.fernuni-hagen.de/english/research/clusters/catalpa/about-catalpa/index.shtml">CATALPA</a>
+      © 2025 CC-BY: Slavisa Radovic & Niels Seidel at <a href="https://www.fernuni-hagen.de/english/research/clusters/catalpa/about-catalpa/index.shtml">CATALPA</a>
 
     </div>
     
